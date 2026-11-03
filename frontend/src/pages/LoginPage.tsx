@@ -40,6 +40,7 @@ export default function LoginPage() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="ornek@ogrenci.edu.tr"
+            aria-invalid={errors.email ? true : undefined}
           />
           {errors.email && <span className="hata-metni">{errors.email}</span>}
         </div>
@@ -51,6 +52,7 @@ export default function LoginPage() {
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            aria-invalid={errors.password ? true : undefined}
           />
           {errors.password && <span className="hata-metni">{errors.password}</span>}
         </div>

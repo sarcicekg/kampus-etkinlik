@@ -262,6 +262,7 @@ footer {
   }
 }
 /* Form Hata Mesajları ve Kırmızı Kutu Stili */
+/* Form Hata Mesajları ve Kırmızı Kutu Stili */
 .hata-metni {
   color: #d9534f;
   font-size: 0.85rem;
@@ -273,5 +274,6 @@ footer {
 input[aria-invalid="true"],
 select[aria-invalid="true"],
 textarea[aria-invalid="true"] {
-  border-color: #d9534f;
+  border: 1px solid #d9534f !important;
+  background-color: #fdf2f2 !important;
 }

@@ -40,6 +40,7 @@ export default function ForgotPasswordPage() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="ornek@ogrenci.edu.tr"
+            aria-invalid={error ? true : undefined}
           />
           {error && <span className="hata-metni">{error}</span>}
         </div>

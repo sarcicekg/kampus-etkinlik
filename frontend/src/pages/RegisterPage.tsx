@@ -55,6 +55,7 @@ export default function RegisterPage() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="Ad Soyad"
+            aria-invalid={errors.name ? true : undefined}
           />
           {errors.name && <span className="hata-metni">{errors.name}</span>}
         </div>
@@ -67,6 +68,7 @@ export default function RegisterPage() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="ornek@ogrenci.edu.tr"
+            aria-invalid={errors.email ? true : undefined}
           />
           {errors.email && <span className="hata-metni">{errors.email}</span>}
         </div>
@@ -78,6 +80,7 @@ export default function RegisterPage() {
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            aria-invalid={errors.password ? true : undefined}
           />
           {errors.password && <span className="hata-metni">{errors.password}</span>}
         </div>
@@ -89,6 +92,7 @@ export default function RegisterPage() {
             id="password2"
             value={password2}
             onChange={(e) => setPassword2(e.target.value)}
+            aria-invalid={errors.password2 ? true : undefined}
           />
           {errors.password2 && <span className="hata-metni">{errors.password2}</span>}
         </div>

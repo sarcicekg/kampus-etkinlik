@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kampüs Etkinlikleri - Etkinlik Ekle</title>
+</head>
+<body>
+
+    <header>
+        <h1>Kampüs Etkinlikleri</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="etkinlik-ekle.html">Ekle</a></li>
+                <li><a href="etkinlik-guncelle.html">Güncelle</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Etkinlik Ekle</h2>
+
+        <form action="#" method="post">
+            <p>
+                <label for="etkinlik-adi">Etkinlik Adı:</label><br>
+                <input type="text" id="etkinlik-adi" name="etkinlik-adi" required>
+            </p>
+
+            <p>
+                <label for="kategori">Kategori:</label><br>
+                <select id="kategori" name="kategori" required>
+                    <option value="">Seçiniz</option>
+                    <option value="Seminer">Seminer</option>
+                    <option value="Atölye">Atölye</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="tarih">Tarih:</label><br>
+                <input type="date" id="tarih" name="tarih" required>
+            </p>
+
+            <p>
+                <label for="yer">Yer:</label><br>
+                <input type="text" id="yer" name="yer" required>
+            </p>
+
+            <p>
+                <label for="kontenjan">Kontenjan:</label><br>
+                <input type="number" id="kontenjan" name="kontenjan" min="1" required>
+            </p>
+
+            <p>
+                <label for="aciklama">Açıklama:</label><br>
+                <textarea id="aciklama" name="aciklama" rows="4" cols="40" required></textarea>
+            </p>
+
+            <p>
+                <button type="submit">Kaydet</button>
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <p>Sefa Uçar &copy; 2026 Kampüs Etkinlikleri</p>
+    </footer>
+
+</body>
+</html>

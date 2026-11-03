@@ -1,67 +1,52 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kampüs Etkinlikleri - Ana Sayfa</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ana Sayfa - Kampüs Etkinlikleri</title>
+  <link rel="stylesheet" href="css/2221032076.css">
 </head>
 <body>
 
-    <header>
-        <h1>Kampüs Etkinlikleri</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="etkinlik-ekle.html">Ekle</a></li>
-                <li><a href="etkinlik-guncelle.html">Güncelle</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>Kampüs Etkinlikleri</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Ana Sayfa</a></li>
+        <li><a href="etkinlikler.html">Etkinlikler</a></li>
+        <li><a href="etkinlik-ekle.html">Ekle</a></li>
+        <li><a href="etkinlik-guncelle.html">Güncelle</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <h2>Etkinlikler</h2>
+  <main>
+    <p style="margin-bottom: var(--bosluk-m);">Fakültedeki seminer, atölye ve söyleşileri tek yerden takip edin.</p>
 
-        <table border="1">
-            <caption>Kampüs Etkinlik Listesi</caption>
-            <thead>
-                <tr>
-                    <th>Afiş</th>
-                    <th>Etkinlik Adı</th>
-                    <th>Kategori</th>
-                    <th>Tarih</th>
-                    <th>İşlem</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <figure>
-                            <img src="https://via.placeholder.com/80" alt="Kariyer Günleri Afişi">
-                        </figure>
-                    </td>
-                    <td>Kariyer Günleri</td>
-                    <td>Seminer</td>
-                    <td><time datetime="2026-10-12">12 Ekim 2026</time></td>
-                    <td><a href="etkinlik-detay.html">Detayları gör</a></td>
-                </tr>
-                <tr>
-                    <td>
-                        <figure>
-                            <img src="https://via.placeholder.com/80" alt="Robotik Atölyesi Afişi">
-                        </figure>
-                    </td>
-                    <td>Robotik Atölyesi</td>
-                    <td>Atölye</td>
-                    <td><time datetime="2026-10-20">20 Ekim 2026</time></td>
-                    <td><a href="etkinlik-detay.html">Detayları gör</a></td>
-                </tr>
-            </tbody>
-        </table>
-    </main>
+    <h2>Yaklaşan 2 Etkinlik</h2>
 
-    <footer>
-        <p>Gökhan Sarıçiçek &copy; 2026 Kampüs Etkinlikleri</p>
-    </footer>
+    <section class="etkinlik-grid ikili">
+      <article class="kart">
+        <h3>Kariyer Günleri</h3>
+        <p><strong>Tarih:</strong> 12 Ekim</p>
+        <a href="etkinlik-detay.html" class="btn-detay">Detay →</a>
+      </article>
+
+      <article class="kart">
+        <h3>Robotik Atölyesi</h3>
+        <p><strong>Tarih:</strong> 20 Ekim</p>
+        <a href="etkinlik-detay.html" class="btn-detay">Detay →</a>
+      </article>
+    </section>
+
+    <div style="margin-top: var(--bosluk-m);">
+      <a href="etkinlikler.html" class="btn-link">Tüm etkinlikleri gör →</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>Gökhan Sarıçiçek - 2221032076</p>
+  </footer>
 
 </body>
 </html>

@@ -4,14 +4,12 @@ import EventCard from "./EventCard";
 
 interface EventListProps {
   events: CampusEvent[];
-  onShowDetail: (id: string) => void;
   emptyText?: string;
   isGrid2?: boolean;
 }
 
 function EventList({
   events,
-  onShowDetail,
   emptyText = "Etkinlik bulunamadı.",
   isGrid2 = false,
 }: EventListProps) {
@@ -22,7 +20,7 @@ function EventList({
   return (
     <div className={`etkinlik-grid ${isGrid2 ? "ikili" : ""}`}>
       {events.map((event) => (
-        <EventCard key={event.id} event={event} onShowDetail={onShowDetail} />
+        <EventCard key={event.id} event={event} />
       ))}
     </div>
   );

@@ -12,3 +12,15 @@ export interface CampusEvent {
   capacity: number;
   image?: string;
 }
+
+// Form verisi için tip (input'lar metin döndürdüğü için capacity metindir, id yoktur)
+export interface EventFormData {
+  title: string;
+  category: Category | "";
+  date: string;
+  time: string;
+  location: string;
+  capacity: string;
+  description: string;
+  image?: string;
+}

@@ -1,14 +1,13 @@
 // frontend/src/components/events/EventDetail.tsx
+import { Link } from "react-router-dom";
 import type { CampusEvent } from "../../types/campus-event";
 import { formatDate } from "../../utils/format-date";
 
 interface EventDetailProps {
   event: CampusEvent;
-  onBack: () => void;
-  onEdit: (id: string) => void;
 }
 
-function EventDetail({ event, onBack, onEdit }: EventDetailProps) {
+function EventDetail({ event }: EventDetailProps) {
   return (
     <div className="detay-container">
       <figure>
@@ -57,16 +56,12 @@ function EventDetail({ event, onBack, onEdit }: EventDetailProps) {
             flexWrap: "wrap",
           }}
         >
-          <button type="button" className="btn-link" onClick={onBack}>
+          <Link to="/events" className="btn-link">
             ← Listeye dön
-          </button>
-          <button
-            type="button"
-            className="btn-detay"
-            onClick={() => onEdit(event.id)}
-          >
+          </Link>
+          <Link to={`/admin/${event.id}/edit`} className="btn-detay">
             Bu etkinliği güncelle
-          </button>
+          </Link>
         </div>
       </div>
     </div>

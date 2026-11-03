@@ -1,33 +1,22 @@
 // frontend/src/components/layout/Navigation.tsx
-import type { PageName } from "../../types/page";
+import { NavLink } from "react-router-dom";
 
-interface NavigationProps {
-  current: PageName;
-  onNavigate: (page: PageName) => void;
-}
-
-const navItems: { name: PageName; label: string }[] = [
-  { name: "home", label: "Ana Sayfa" },
-  { name: "events", label: "Etkinlikler" },
-  { name: "add", label: "Ekle" },
+const menuItems = [
+  { to: "/", label: "Ana Sayfa" },
+  { to: "/events", label: "Etkinlikler" },
+  { to: "/admin", label: "Yönetim" },
+  { to: "/login", label: "Giriş" },
 ];
 
-function Navigation({ current, onNavigate }: NavigationProps) {
+function Navigation() {
   return (
     <nav className="menu" style={{ marginTop: "var(--bosluk-m)" }}>
       <ul>
-        {navItems.map((item) => (
-          <li key={item.name}>
-            <a
-              href={`#${item.name}`}
-              aria-current={current === item.name ? "page" : undefined}
-              onClick={(e) => {
-                e.preventDefault();
-                onNavigate(item.name);
-              }}
-            >
+        {menuItems.map((item) => (
+          <li key={item.to}>
+            <NavLink to={item.to} end={item.to === "/"}>
               {item.label}
-            </a>
+            </NavLink>
           </li>
         ))}
       </ul>

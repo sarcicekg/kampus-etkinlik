@@ -1,13 +1,13 @@
 // frontend/src/components/events/EventCard.tsx
+import { Link } from "react-router-dom";
 import type { CampusEvent } from "../../types/campus-event";
 import { formatDate } from "../../utils/format-date";
 
 interface EventCardProps {
   event: CampusEvent;
-  onShowDetail: (id: string) => void;
 }
 
-function EventCard({ event, onShowDetail }: EventCardProps) {
+function EventCard({ event }: EventCardProps) {
   return (
     <article className="kart">
       <h3>{event.title}</h3>
@@ -24,14 +24,13 @@ function EventCard({ event, onShowDetail }: EventCardProps) {
         <strong>Kontenjan:</strong> {event.capacity} kişi
       </p>
       <p style={{ marginTop: "0.5rem" }}>{event.description}</p>
-      <button
-        type="button"
+      <Link
+        to={`/events/${event.id}`}
         className="btn-detay"
-        style={{ marginTop: "var(--bosluk-m)" }}
-        onClick={() => onShowDetail(event.id)}
+        style={{ marginTop: "var(--bosluk-m)", display: "inline-block" }}
       >
         Detayları gör →
-      </button>
+      </Link>
     </article>
   );
 }

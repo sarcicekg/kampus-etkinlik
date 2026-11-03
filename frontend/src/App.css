@@ -189,3 +189,89 @@ footer {
   font-size: 0.9rem;
   color: #666;
 }
+/* Yönetim Tablosu Stilleri */
+.tablo {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--bosluk-m);
+}
+
+.tablo th,
+.tablo td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.tablo th {
+  background: var(--renk-ana);
+  color: #fff;
+}
+
+.islemler {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.btn-sil {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--kose);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-sil:hover {
+  background-color: #c9302c;
+}
+
+/* Mobil Tablo Tasarımı (360px - 699px arası) */
+@media (max-width: 699px) {
+  .tablo thead {
+    display: none;
+  }
+  .tablo,
+  .tablo tbody,
+  .tablo tr,
+  .tablo td {
+    display: block;
+    width: 100%;
+  }
+  .tablo tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: var(--kose);
+    padding: 0.5rem;
+  }
+  .tablo td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+  }
+  .tablo td:last-child {
+    border-bottom: none;
+  }
+  .tablo td[data-baslik]::before {
+    content: attr(data-baslik);
+    font-weight: bold;
+    margin-right: 1rem;
+  }
+}
+/* Form Hata Mesajları ve Kırmızı Kutu Stili */
+.hata-metni {
+  color: #d9534f;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  display: block;
+  font-weight: bold;
+}
+
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: #d9534f;
+}

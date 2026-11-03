@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etkinlik Ekle - Kampüs Etkinlikleri</title>
+  <link rel="stylesheet" href="css/2221032076.css">
+  <script type="module" src="js/event-form.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Kampüs Etkinlikleri</h1>
+    <nav>
+  <ul>
+    <li><a href="index.html">Ana Sayfa</a></li>
+    <li><a href="etkinlikler.html">Etkinlikler</a></li>
+    <li><a href="etkinlik-ekle.html">Ekle</a></li>
+  </ul>
+</nav>
+  </header>
+
+  <main>
+  <h2>Etkinlik Ekle</h2>
+
+  <form id="etkinlik-formu" novalidate>
+    <div class="form-group">
+      <label for="ad">Etkinlik Adı *</label>
+      <input type="text" id="ad" name="ad" placeholder="Örn. Web Tasarım Atölyesi">
+      <span class="hata-mesaji" id="hata-ad" style="color: red; font-size: 0.85rem; margin-top: 0.2rem;"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="kategori">Kategori *</label>
+      <select id="kategori" name="kategori">
+        <option value="">Seçiniz</option>
+        <option value="Seminer">Seminer</option>
+        <option value="Atölye">Atölye</option>
+        <option value="Söyleşi">Söyleşi</option>
+      </select>
+      <span class="hata-mesaji" id="hata-kategori" style="color: red; font-size: 0.85rem; margin-top: 0.2rem;"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="tarih">Tarih *</label>
+      <input type="date" id="tarih" name="tarih">
+      <span class="hata-mesaji" id="hata-tarih" style="color: red; font-size: 0.85rem; margin-top: 0.2rem;"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="saat">Saat *</label>
+      <input type="time" id="saat" name="saat">
+      <span class="hata-mesaji" id="hata-saat" style="color: red; font-size: 0.85rem; margin-top: 0.2rem;"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="yer">Yer *</label>
+      <input type="text" id="yer" name="yer" placeholder="Örn. A Blok Konferans Salonu">
+      <span class="hata-mesaji" id="hata-yer" style="color: red; font-size: 0.85rem; margin-top: 0.2rem;"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="kontenjan">Kontenjan (1-1000)</label>
+      <input type="number" id="kontenjan" name="kontenjan" placeholder="Örn. 50">
+      <span class="hata-mesaji" id="hata-kontenjan" style="color: red; font-size: 0.85rem; margin-top: 0.2rem;"></span>
+    </div>
+
+    <div class="form-group">
+      <label for="aciklama">Açıklama</label>
+      <textarea id="aciklama" name="aciklama" rows="4" placeholder="Etkinlik detayları..."></textarea>
+    </div>
+
+    <div>
+      <button type="submit">Kaydet</button>
+    </div>
+  </form>
+
+  <div id="form-mesaj" style="margin-top: var(--bosluk-m);"></div>
+</main>
+
+  <footer>
+    <p>Gökhan Sarıçiçek - 2221032076</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+/* Gökhan Sarıçiçek 2221032076 */
+:root {
+  --no: 2221032076;
+  --ton: mod(var(--no), 360);
+  --renk-ana: hsl(var(--ton) 65% 38%);
+  --renk-zemin: hsl(var(--ton) 30% 97%);
+  --font: "Courier New", monospace;
+  --bosluk-m: 1rem;
+  --kose: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--renk-zemin);
+  color: #333;
+  line-height: 1.5;
+  padding: var(--bosluk-m);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header & Nav Yapısı */
+header {
+  background-color: #fff;
+  padding: var(--bosluk-m);
+  border-radius: var(--kose);
+  margin-bottom: var(--bosluk-m);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+header h1 {
+  color: var(--renk-ana);
+  margin-bottom: 0.5rem;
+}
+
+nav ul {
+  display: flex;
+  gap: var(--bosluk-m);
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--renk-ana);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.4rem 0.8rem;
+  border-radius: calc(var(--kose) / 2);
+}
+
+nav a:hover, nav a.active {
+  background-color: var(--renk-ana);
+  color: #fff;
+}
+
+/* Ana İçerik */
+main {
+  background-color: #fff;
+  padding: var(--bosluk-m);
+  border-radius: var(--kose);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+h2 {
+  color: var(--renk-ana);
+  margin-bottom: var(--bosluk-m);
+}
+
+/* Tablodan Karta Geçiş - Responsive Grid */
+.etkinlik-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Telefonda Tek Sütun */
+  gap: var(--bosluk-m);
+  margin-bottom: var(--bosluk-m);
+}
+
+@media (min-width: 768px) {
+  .etkinlik-grid {
+    grid-template-columns: repeat(3, 1fr); /* Geniş Ekranda 3 Sütun */
+  }
+  .etkinlik-grid.ikili {
+    grid-template-columns: repeat(2, 1fr); /* Ana Sayfadaki Yaklaşan 2 Etkinlik İçin */
+  }
+}
+
+/* Kart Yapısı */
+article.kart {
+  border: 1px solid #e0e0e0;
+  border-radius: var(--kose);
+  padding: var(--bosluk-m);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+article.kart h3 {
+  color: var(--renk-ana);
+  margin-bottom: 0.5rem;
+}
+
+article.kart p {
+  margin-bottom: 0.5rem;
+}
+
+.btn-detay, button, .btn-link {
+  display: inline-block;
+  background-color: var(--renk-ana);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: calc(var(--kose) / 2);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  margin-top: 0.5rem;
+}
+
+/* Formlar (Ekle & Güncelle) */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bosluk-m);
+  max-width: 600px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  color: #444;
+}
+
+input, select, textarea {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: calc(var(--kose) / 2);
+  font-family: inherit;
+}
+
+/* Boş bırakıldığında veya hatalı alanda kırmızı çerçeve */
+input:invalid:focus, select:invalid:focus, textarea:invalid:focus {
+  border-color: red;
+  outline: 1px solid red;
+}
+
+/* Detay Sayfası Düzeni (Afiş Solda, Künye Sağda) */
+.detay-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bosluk-m);
+}
+
+@media (min-width: 768px) {
+  .detay-container {
+    flex-direction: row;
+  }
+}
+
+.detay-afis {
+  max-width: 100%;
+  border-radius: var(--kose);
+}
+
+dl.kunye {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 1rem;
+}
+
+dl.kunye dt {
+  font-weight: bold;
+  color: var(--renk-ana);
+}
+
+footer {
+  text-align: center;
+  margin-top: var(--bosluk-m);
+  font-size: 0.9rem;
+  color: #666;
+}

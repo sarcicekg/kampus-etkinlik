@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tüm Etkinlikler - Kampüs Etkinlikleri</title>
+  <link rel="stylesheet" href="css/2221032076.css">
+  <script type="module" src="js/event-list.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Kampüs Etkinlikleri</h1>
+    <nav>
+  <ul>
+    <li><a href="index.html">Ana Sayfa</a></li>
+    <li><a href="etkinlikler.html">Etkinlikler</a></li>
+    <li><a href="etkinlik-ekle.html">Ekle</a></li>
+  </ul>
+</nav>
+  </header>
+
+  <main>
+    <h2>Tüm Etkinlikler</h2>
+    <form id="filtre-formu" class="filtre" style="display: flex; gap: var(--bosluk-m); flex-wrap: wrap; margin-bottom: var(--bosluk-m);">
+  <div class="form-group" style="flex: 1; min-width: 200px;">
+    <label for="arama">Etkinlik ara</label>
+    <input type="search" id="arama" placeholder="Örn. atölye, kariyer...">
+  </div>
+  <div class="form-group" style="flex: 1; min-width: 200px;">
+    <label for="kategori-filtre">Kategori</label>
+    <select id="kategori-filtre">
+      <option value="">Tümü</option>
+    </select>
+  </div>
+</form>
+
+<p id="sonuc" style="margin-bottom: var(--bosluk-m); font-weight: bold;"></p>
+
+    <section id="etkinlik-listesi" class="etkinlik-grid"></section>
+  </main>
+
+  <footer>
+    <p>Gökhan Sarıçiçek - 2221032076</p>
+  </footer>
+
+</body>
+</html>

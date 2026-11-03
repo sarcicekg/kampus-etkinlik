@@ -8,4 +8,4 @@ Bu proje, Kampüs Etkinlikleri uygulamasının HTML5 semantic etiketleri kullan�
 - Form alanları görünür `label` etiketleri ve `required` doğrulama öznitelikleri ile yapılandırılmıştır.
 
 ## Canlı Yayın (Vercel)
-- Canlı URL: https://<sprint1-proje-adiniz>.vercel.app
+- Canlı URL: https://kampus-etkinlik-six.vercel.app/

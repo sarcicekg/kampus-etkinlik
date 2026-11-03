@@ -3,7 +3,7 @@
 Fakültedeki seminer, atölye, söyleşi ve yarışmaları tek bir platform üzerinden takip etmeyi ve yönetmeyi sağlayan React, TypeScript ve React Router kullanılarak geliştirilmiş web uygulaması.
 
 ## Canlı Vercel Adresi
-https://kampus-etkinlik-six.vercel.app
+https://gokhansarcicek-frontend.vercel.app/
 
 ## Kurulum ve Çalıştırma
 

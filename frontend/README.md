@@ -1,21 +1,10 @@
-https://kampus-etkinlik-six.vercel.app
+Kampüs Etkinlikleri — Sprint 6 & VizeFakültedeki seminer, atölye, söyleşi ve yarışmaları tek bir platform üzerinden takip etmeyi ve yönetmeyi sağlayan React, TypeScript ve React Router tabanlı web uygulaması.🚀 Canlı Yayın (Vercel)Canlı Adres: https://kampus-etkinlik-six.vercel.app👤 Öğrenci BilgileriAd Soyad: Gökhan SarıçiçekÖğrenci Numarası: 2221032076Git Tag: frontend / sprint-06🛠️ Kurulum ve ÇalıştırmaProjeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyebilirsiniz:# 1. Proje dizinine girin
+cd frontend
 
-# Kampüs Etkinlikleri — Sprint 4 (Vite, React & TypeScript)
+# 2. Gerekli paketleri yükleyin
+npm install
 
-Bu proje, Kampüs Etkinlikleri uygulamasının Vite, React ve TypeScript altyapısına taşınmış Sprint 4 sürümüdür.
-
-## Proje Bilgileri
-* **Öğrenci Adı Soyadı:** Gökhan Sarıçiçek
-* **Öğrenci Numarası:** 2221032076
-* **Git Etiketi (Tag):** `sprint-04`
-* **Vercel Canlı Yayın Adresi:** https://kampus-etkinlik-six.vercel.app
-
-## Dosya Yapısı ve Görevleri
-* `package.json`: Proje adı, bağımlılıklar ve npm komutlarını (dev, build) tanımlar.
-* `vite.config.ts`: Vite sunucusu ve React eklentisi yapılandırmalarını içerir.
-* `index.html`: Uygulamanın tek HTML giriş noktasıdır; `div#root` elemanını barındırır.
-* `src/main.tsx`: React uygulamasını başlatır ve `App` bileşenini DOM'a bağlar.
-* `src/App.tsx`: 5 sayfanın görünüm ve state mantığını yöneten ana bileşendir.
-* `src/types/campus-event.ts`: Etkinlik ve kategori veri tiplerini tanımlar.
-* `src/data/events.ts`: Tip güvenli 6 etkinlik verisini barındırır.
-* `src/utils/filter-events.ts`: Arama, kategori filtreleme ve ID bulma saf fonksiyonlarını içerir.
+# 3. Geliştirme sunucusunu başlatın
+npm run dev
+Derleme (build) testi için:npm run build
+🗺️ Route Listesi (10 Adres)AdresSayfa BileşeniAçıklama/HomePageYaklaşan ilk 2 etkinliği ve özet bilgileri listeler./eventsEventsPageArama ve kategori filtreleme özellikli tüm etkinlikler./events/:idEventDetailPageSeçilen etkinliğin detaylı künyesi ve afişi./adminAdminPageEtkinlik yönetim tablosu (Ekle, Düzenle, Sil işlemleri)./admin/newAddEventPageDoğrulamalı yeni etkinlik ekleme formu./admin/:id/editEditEventPageMevcut etkinlik bilgilerini güncelleme formu./loginLoginPageE-posta ve şifre doğrulamalı kullanıcı giriş sayfası./registerRegisterPageAd soyad, e-posta ve şifre doğrulamalı kayıt sayfası./forgot-passwordForgotPasswordPageŞifre yenileme bağlantısı isteme sayfası.*NotFoundPageTanımsız adresler için 404 hata sayfası.🛠️ Kullanılan Teknolojiler ve MimariFramework & Build Tool: React 18, Vite, TypeScriptYönlendirme (Routing): React Router v6 (BrowserRouter, Routes, Route, NavLink, useParams, useNavigate)State Management: React Context API (EventsContext, custom hook useEvents)Form Doğrulama: Saf doğrulama fonksiyonları (validateEvent), kontrollü form elemanları (controlled inputs) ve dinamik hata mesajları

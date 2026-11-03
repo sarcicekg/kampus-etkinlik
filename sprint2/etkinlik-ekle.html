@@ -1,72 +1,63 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kampüs Etkinlikleri - Etkinlik Ekle</title>
-    <link rel="stylesheet" href="css/2221032076.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etkinlik Ekle - Kampüs Etkinlikleri</title>
+  <link rel="stylesheet" href="css/2221032076.css">
 </head>
 <body>
 
-    <header>
-  <h1>Kampüs Etkinlikleri</h1>
-  <nav>
-    <ul>
-      <li><a href="index.html">Ana Sayfa</a></li>
-      <li><a href="etkinlikler.html">Etkinlikler</a></li>
-      <li><a href="etkinlik-ekle.html">Ekle</a></li>
-      <li><a href="etkinlik-guncelle.html">Güncelle</a></li>
-    </ul>
-  </nav>
-</header>
+  <header>
+    <h1>Kampüs Etkinlikleri</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="etkinlikler.html">Etkinlikler</a></li>
+        <li><a href="etkinlik-ekle.html" class="active">Ekle</a></li>
+        <li><a href="etkinlik-guncelle.html">Güncelle</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <h2>Etkinlik Ekle</h2>
+  <main>
+    <h2>Etkinlik Ekle</h2>
 
-        <form action="#" method="post">
-            <p>
-                <label for="etkinlik-adi">Etkinlik Adı:</label><br>
-                <input type="text" id="etkinlik-adi" name="etkinlik-adi" required>
-            </p>
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="etkinlik-adi">Etkinlik Adı</label>
+        <input type="text" id="etkinlik-adi" name="etkinlik-adi" required placeholder="Etkinlik adını giriniz">
+      </div>
 
-            <p>
-                <label for="kategori">Kategori:</label><br>
-                <select id="kategori" name="kategori" required>
-                    <option value="">Seçiniz</option>
-                    <option value="Seminer">Seminer</option>
-                    <option value="Atölye">Atölye</option>
-                </select>
-            </p>
+      <div class="form-group">
+        <label for="kategori">Kategori</label>
+        <select id="kategori" name="kategori" required>
+          <option value="">Seçiniz</option>
+          <option value="seminer">Seminer</option>
+          <option value="atolye">Atölye</option>
+          <option value="soylesi">Söyleşi</option>
+        </select>
+      </div>
 
-            <p>
-                <label for="tarih">Tarih:</label><br>
-                <input type="date" id="tarih" name="tarih" required>
-            </p>
+      <div class="form-group">
+        <label for="tarih">Tarih</label>
+        <input type="date" id="tarih" name="tarih" required>
+      </div>
 
-            <p>
-                <label for="yer">Yer:</label><br>
-                <input type="text" id="yer" name="yer" required>
-            </p>
+      <div class="form-group">
+        <label for="aciklama">Açıklama</label>
+        <textarea id="aciklama" name="aciklama" rows="4" placeholder="Etkinlik açıklamasını giriniz"></textarea>
+      </div>
 
-            <p>
-                <label for="kontenjan">Kontenjan:</label><br>
-                <input type="number" id="kontenjan" name="kontenjan" min="1" required>
-            </p>
+      <div>
+        <button type="submit">Kaydet</button>
+      </div>
+    </form>
+  </main>
 
-            <p>
-                <label for="aciklama">Açıklama:</label><br>
-                <textarea id="aciklama" name="aciklama" rows="4" cols="40" required></textarea>
-            </p>
-
-            <p>
-                <button type="submit">Kaydet</button>
-            </p>
-        </form>
-    </main>
-
-    <footer>
-        <p>Gökhan Sarıçiçek &copy; 2026 Kampüs Etkinlikleri</p>
-    </footer>
+  <footer>
+    <p>Gökhan Sarıçiçek - 2221032076</p>
+  </footer>
 
 </body>
 </html>

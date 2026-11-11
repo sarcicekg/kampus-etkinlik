@@ -1,3 +1,4 @@
+// Express Server Configuration - Sprint 7git add backend/src/server.js
 import "dotenv/config";
 import app from "./app.js";
 
